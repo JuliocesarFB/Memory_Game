@@ -1,0 +1,41 @@
+.hiddenCard {
+    border: 2px solid #000000;
+    border-radius: 25px;
+    background-image: url(./images/traseira.png);
+}
+
+.card {
+    border: 2px solid #000000;
+}
+
+#crclCard {
+    background-image: url(./images/circulo.png);
+}
+
+#trngCard {
+    background-image: url(./images/triangulo.png);
+}
+
+#sqrCard {
+    background-image: url(./images/quadrado.png);
+}
+
+#pntgCard {
+    background-image: url(./images/poligono.png);
+}
+
+#hxgCard {
+    background-image: url(./images/hexagono.png);
+}
+
+#hptgCard {
+    background-image: url(./images/heptagono.png);
+}
+
+#octCard {
+    background-image: url(./images/octagono.png);
+}
+
+#engnCard {
+    background-image: url(./images/eneagono.png);
+}
