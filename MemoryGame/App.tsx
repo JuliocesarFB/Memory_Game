@@ -7,6 +7,18 @@ const App = () => {
     <View>
       <Text>Jogo da Memoria</Text>
       <Text>00:00</Text>
+      <View>
+        <View></View>
+        <View></View>
+        <View></View>
+        <View></View>
+        <View></View>
+        <View></View>
+        <View></View>
+        <View></View>
+      </View>
+      <Text>Faltam 99 pares.</Text>
+      <Button title='Iniciar' />
     </View>
   )
 }
