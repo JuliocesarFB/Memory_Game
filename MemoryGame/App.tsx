@@ -1,24 +1,14 @@
-import React, { useCallback, useEffect, useState } from 'react'
-import { Button, StatusBar, StyleSheet, Text, View } from 'react-native'
-// import { Container, Col, Row } from "react-bootstrap";
+import React from 'react';
+import MemoryGame from './components';
+import './App.css'
 
-const App = () => {
-  return(
-    <View>
-      <Text>Jogo da Memoria</Text>
-      <Text>00:00</Text>
-      <View>
-        <View></View>
-        <View></View>
-        <View></View>
-        <View></View>
-        <View></View>
-        <View></View>
-        <View></View>
-        <View></View>
-      </View>
-      <Text>Faltam 99 pares.</Text>
-      <Button title='Iniciar' />
-    </View>
-  )
+function App() {
+  return (
+    <>
+    <p className='text'>Jogo da Memória</p>
+     <MemoryGame/>
+    </>
+  );
 }
+
+export default App;
