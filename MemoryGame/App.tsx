@@ -1,5 +1,5 @@
 import React, { useCallback, useEffect, useState } from 'react'
-import { Button, StatusBar, StyleSheet, Text, View } from 'react-native'
+import { Button, StatusBar, StyleSheet, Text, View, ImageBackground, Image } from 'react-native'
 //tentar importar css de outra pasta
 
 
@@ -17,10 +17,9 @@ const appStyle = StyleSheet.create({
     marginTop: 20
   },
   card: {
-    backgroundColor: 'yellow',
     width: 80,
     height: 80,
-    margin: 10
+    margin: 10    
   },
   backcard: {
     display: 'flex',
@@ -44,9 +43,39 @@ const appStyle = StyleSheet.create({
 
 
 const App = () => {
-  const toggleRuning = () => {
-    
+
+  const toggleRuning = () => {  
   }
+
+  // const randomCard = () => {
+
+  //   const ArraysImg = [
+  //     './images/traseira.png',
+  //     './images/circulo.png',
+  //     './images/triangulo.png',
+  //     './images/quadrado.png',
+  //     './images/poligono.png',
+  //     './images/hexagono.png',
+  //     './images/heptagono.png',
+  //     './images/octagono.png',
+  //     './images/eneagono.png'
+  //   ]
+
+  //   const random = Math.random() * (7 - 0) + 0
+  //   card(random)
+  //   return require(ArraysImg[0]) 
+  //   //tentando retornar imagem
+  // }
+
+
+  // const card = (x: number) => {
+  //   const cardX ={
+  //     id: x,
+  //     img: ArraysImg[x]
+  //   } 
+  //   const cardSorted = []
+  //   return cardX.img
+  // }
 
   return(
     <View>
@@ -54,28 +83,29 @@ const App = () => {
       <Text style={appStyle.time}>00:00</Text>
       <View style={appStyle.backcard}>
         <View>
-          <View style={appStyle.card}></View>  
-          <View style={appStyle.card}></View>
-          <View style={appStyle.card}></View>
-          <View style={appStyle.card}></View>
+          {/* <ImageBackground source={randomCard()} style={appStyle.card}  ></ImageBackground> */}
+          <ImageBackground source={require('./style/images/traseira.png')} style={appStyle.card}  ></ImageBackground>
+          <ImageBackground source={require('./style/images/traseira.png')} style={appStyle.card}  ></ImageBackground>
+          <ImageBackground source={require('./style/images/traseira.png')} style={appStyle.card}  ></ImageBackground>
+          <ImageBackground source={require('./style/images/traseira.png')} style={appStyle.card}  ></ImageBackground>
         </View>
         <View>
-          <View style={appStyle.card}></View>  
-          <View style={appStyle.card}></View>
-          <View style={appStyle.card}></View>
-          <View style={appStyle.card}></View>
+          <ImageBackground source={require('./style/images/traseira.png')} style={appStyle.card}  ></ImageBackground>
+          <ImageBackground source={require('./style/images/traseira.png')} style={appStyle.card}  ></ImageBackground>
+          <ImageBackground source={require('./style/images/traseira.png')} style={appStyle.card}  ></ImageBackground>
+          <ImageBackground source={require('./style/images/traseira.png')} style={appStyle.card}  ></ImageBackground>
         </View>
         <View>
-          <View style={appStyle.card}></View>  
-          <View style={appStyle.card}></View>
-          <View style={appStyle.card}></View>
-          <View style={appStyle.card}></View>
+          <ImageBackground source={require('./style/images/traseira.png')} style={appStyle.card}  ></ImageBackground>
+          <ImageBackground source={require('./style/images/traseira.png')} style={appStyle.card}  ></ImageBackground>
+          <ImageBackground source={require('./style/images/traseira.png')} style={appStyle.card}  ></ImageBackground>
+          <ImageBackground source={require('./style/images/traseira.png')} style={appStyle.card}  ></ImageBackground>
         </View>
         <View>
-          <View style={appStyle.card}></View>  
-          <View style={appStyle.card}></View>
-          <View style={appStyle.card}></View>
-          <View style={appStyle.card}></View>
+          <ImageBackground source={require('./style/images/traseira.png')} style={appStyle.card}  ></ImageBackground>
+          <ImageBackground source={require('./style/images/traseira.png')} style={appStyle.card}  ></ImageBackground>
+          <ImageBackground source={require('./style/images/traseira.png')} style={appStyle.card}  ></ImageBackground>
+          <ImageBackground source={require('./style/images/traseira.png')} style={appStyle.card}  ></ImageBackground>
         </View>
         
       </View>
