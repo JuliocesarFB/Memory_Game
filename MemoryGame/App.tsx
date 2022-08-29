@@ -1,46 +1,6 @@
 import React, { useCallback, useEffect, useState } from 'react'
 import { Button, StatusBar, StyleSheet, Text, View, ImageBackground, Image } from 'react-native'
-//tentar importar css de outra pasta
-
-
-const appStyle = StyleSheet.create({
-  title: {
-    color: 'black' ,
-    textAlign: 'center',
-    fontSize: 40,
-    marginTop: 20
-  },
-  time: {
-    color: 'black' ,
-    textAlign: 'center',
-    fontSize: 60,
-    marginTop: 20
-  },
-  card: {
-    width: 80,
-    height: 80,
-    margin: 10    
-  },
-  backcard: {
-    display: 'flex',
-    flex: 0,
-    flexDirection: 'row',
-    justifyContent: 'center',
-    margin: 25
-  },
-  pair: {
-    color: 'black' ,
-    textAlign: 'center',
-    fontSize: 24,
-    margin: 10,
-    marginTop: 50
-  },
-  button: {    
-    padding: 10
-  }
-})
-
-
+import * as appStyle from './style/styles.css' 
 
 const App = () => {
 
