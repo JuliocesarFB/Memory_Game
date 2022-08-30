@@ -3,7 +3,8 @@ import { Image, StyleSheet } from "react-native";
 const Styles = StyleSheet.create({
     hiddenCard: {
         borderColor: '#000000',
-        borderRadius: 25
+        borderRadius: 25,
+        borderWidth: 2
     },
     title: {
         color: 'black' ,
@@ -19,6 +20,7 @@ const Styles = StyleSheet.create({
     },    
     card: {
       width: 80,
+      height: 80,
       margin: 10,
       borderColor: '#000000'
     },    
