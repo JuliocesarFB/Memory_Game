@@ -1,6 +1,6 @@
 import React, { useCallback, useEffect, useState } from 'react'
-import { Button, StatusBar, StyleSheet, Text, View, ImageBackground, Image } from 'react-native'
-import * as appStyle from './style/styles.css' 
+import { Button, StatusBar, StyleSheet, Text, View, ImageBackground, Image } from 'react-native' 
+import Styles from './src/card/style'
 
 const App = () => {
 
@@ -39,39 +39,38 @@ const App = () => {
 
   return(
     <View>
-      <Text style={appStyle.title}>Jogo da Memoria</Text>
-      <Text style={appStyle.time}>00:00</Text>
-      <View style={appStyle.backcard}>
+      <Text style={Styles.title}>Jogo da Memoria</Text>
+      <Text style={Styles.time}>00:00</Text>
+      <View style={Styles.backcard}>
         <View>
-          {/* <ImageBackground source={randomCard()} style={appStyle.card}  ></ImageBackground> */}
-          <ImageBackground source={require('./style/images/traseira.png')} style={appStyle.card}  ></ImageBackground>
-          <ImageBackground source={require('./style/images/traseira.png')} style={appStyle.card}  ></ImageBackground>
-          <ImageBackground source={require('./style/images/traseira.png')} style={appStyle.card}  ></ImageBackground>
-          <ImageBackground source={require('./style/images/traseira.png')} style={appStyle.card}  ></ImageBackground>
+          <ImageBackground source={require('./src/card/images/traseira.png')} style={Styles.card} ></ImageBackground>
+          <ImageBackground source={require('./src/card/images/traseira.png')} style={Styles.card} ></ImageBackground>
+          <ImageBackground source={require('./src/card/images/traseira.png')} style={Styles.card} ></ImageBackground>
+          <ImageBackground source={require('./src/card/images/traseira.png')} style={Styles.card} ></ImageBackground>
         </View>
         <View>
-          <ImageBackground source={require('./style/images/traseira.png')} style={appStyle.card}  ></ImageBackground>
-          <ImageBackground source={require('./style/images/traseira.png')} style={appStyle.card}  ></ImageBackground>
-          <ImageBackground source={require('./style/images/traseira.png')} style={appStyle.card}  ></ImageBackground>
-          <ImageBackground source={require('./style/images/traseira.png')} style={appStyle.card}  ></ImageBackground>
+          <ImageBackground source={require('./src/card/images/traseira.png')} style={Styles.card} ></ImageBackground>
+          <ImageBackground source={require('./src/card/images/traseira.png')} style={Styles.card} ></ImageBackground>
+          <ImageBackground source={require('./src/card/images/traseira.png')} style={Styles.card} ></ImageBackground>
+          <ImageBackground source={require('./src/card/images/traseira.png')} style={Styles.card} ></ImageBackground>
         </View>
         <View>
-          <ImageBackground source={require('./style/images/traseira.png')} style={appStyle.card}  ></ImageBackground>
-          <ImageBackground source={require('./style/images/traseira.png')} style={appStyle.card}  ></ImageBackground>
-          <ImageBackground source={require('./style/images/traseira.png')} style={appStyle.card}  ></ImageBackground>
-          <ImageBackground source={require('./style/images/traseira.png')} style={appStyle.card}  ></ImageBackground>
+          <ImageBackground source={require('./src/card/images/traseira.png')} style={Styles.card} ></ImageBackground>
+          <ImageBackground source={require('./src/card/images/traseira.png')} style={Styles.card} ></ImageBackground>
+          <ImageBackground source={require('./src/card/images/traseira.png')} style={Styles.card} ></ImageBackground>
+          <ImageBackground source={require('./src/card/images/traseira.png')} style={Styles.card} ></ImageBackground>
         </View>
         <View>
-          <ImageBackground source={require('./style/images/traseira.png')} style={appStyle.card}  ></ImageBackground>
-          <ImageBackground source={require('./style/images/traseira.png')} style={appStyle.card}  ></ImageBackground>
-          <ImageBackground source={require('./style/images/traseira.png')} style={appStyle.card}  ></ImageBackground>
-          <ImageBackground source={require('./style/images/traseira.png')} style={appStyle.card}  ></ImageBackground>
+          <ImageBackground source={require('./src/card/images/traseira.png')} style={Styles.card} ></ImageBackground>
+          <ImageBackground source={require('./src/card/images/traseira.png')} style={Styles.card} ></ImageBackground>
+          <ImageBackground source={require('./src/card/images/traseira.png')} style={Styles.card} ></ImageBackground>
+          <ImageBackground source={require('./src/card/images/traseira.png')} style={Styles.card} ></ImageBackground>
         </View>
         
       </View>
-      <Text style={appStyle.pair}>Faltam 99 pares.</Text>
-      <View style={appStyle.button}>
-        <Button title='Iniciar'color={'#daa520'} onPress={toggleRuning} />
+      <Text style={Styles.pair}>Faltam 99 pares.</Text>
+      <View style={Styles.button}>
+        <Button title='Iniciar'color={'#daa520'} onPress={() => {}} />
       </View>
       
     </View>
