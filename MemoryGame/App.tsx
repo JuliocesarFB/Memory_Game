@@ -1,41 +1,104 @@
 import React, { useCallback, useEffect, useState } from 'react'
-import { Button, StatusBar, StyleSheet, Text, View, ImageBackground, Image } from 'react-native' 
+import { Button, StatusBar, StyleSheet, Text, View, ImageBackground, Image, ImageBackgroundBase, Touchable, TouchableOpacity, FlatList, InteractionManager } from 'react-native' 
 import Styles from './src/card/style'
 
+const BACKCARD  = './src/card/images/traseira.png'
+const CIRCULO   = './src/card/images/circulo.png'
+const TRINGULO  = './src/card/images/triangulo.png'
+const QUADRADO  = './src/card/images/quadrado.png'
+const POLIGONO  = './src/card/images/poligono.png'
+const HEXAGONO  = './src/card/images/hexagono.png'
+const HEPTAGONO = './src/card/images/heptagono.png'
+const OCTAGONO  = './src/card/images/octagono.png'
+const ENEAGNO   = './src/card/images/eneagnono.png'
+
+const getInitialBoard = () =>  [
+  ['', '', '',''],
+  ['', '', '',''],
+  ['', '', '',''],
+  ['', '', '','']
+]
+
 const App = () => {
+
+  const listCard =  [
+    CIRCULO,
+    TRINGULO,
+    QUADRADO,
+    POLIGONO,
+    HEXAGONO,
+    HEPTAGONO,
+    OCTAGONO,
+    ENEAGNO
+  ]
+  const listCard2 = () =>  [
+    'circulo', 'triagulo', 'quadrado', 'poligono', 'hexagono', 'heptagono', 'octagono', 'eneagno'
+  ]
+
+  const [newListCard, setNewListCard] = useState([])
+  const [board, setBoard] = useState(getInitialBoard)
+  const [buttonClicked, setButtonClicked] = useState(false)
+  const [count, setCount] = useState(false)
+  const [listCard3, setNewListCard3] = useState(listCard2)
+  const [people2, setPeople2] = useState([
+    { name: 'traseira',   source: require('./src/card/images/traseira.png'),   id: '1'},
+    { name: 'traseira',   source: require('./src/card/images/traseira.png'),   id: '2'},
+    { name: 'traseira',   source: require('./src/card/images/traseira.png'),   id: '3'},
+    { name: 'traseira',   source: require('./src/card/images/traseira.png'),   id: '4'},
+    { name: 'traseira',   source: require('./src/card/images/traseira.png'),   id: '5'},
+    { name: 'traseira',   source: require('./src/card/images/traseira.png'),   id: '6'},
+    { name: 'traseira',   source: require('./src/card/images/traseira.png'),   id: '7'},
+    { name: 'traseira',   source: require('./src/card/images/traseira.png'),   id: '8'},
+    { name: 'traseira',   source: require('./src/card/images/traseira.png'),   id: '9'},
+    { name: 'traseira',   source: require('./src/card/images/traseira.png'),   id: '10'},
+    { name: 'traseira',   source: require('./src/card/images/traseira.png'),   id: '11'},
+    { name: 'traseira',   source: require('./src/card/images/traseira.png'),   id: '12'},
+    { name: 'traseira',   source: require('./src/card/images/traseira.png'),   id: '13'},
+    { name: 'traseira',   source: require('./src/card/images/traseira.png'),   id: '14'},
+    { name: 'traseira',   source: require('./src/card/images/traseira.png'),   id: '15'},
+    { name: 'traseira',   source: require('./src/card/images/traseira.png'),   id: '16'},
+  ])
+  const [people, setPeople] = useState([
+    { name: 'circulo',   source: require('./src/card/images/circulo.png'),   id: '1'},
+    { name: 'triangulo', source: require('./src/card/images/triangulo.png'), id: '2'},
+    { name: 'quadrado',  source: require('./src/card/images/quadrado.png'),  id: '3'},
+    { name: 'poligono',  source: require('./src/card/images/poligono.png'),  id: '4'},
+    { name: 'hexagono',  source: require('./src/card/images/hexagono.png'),  id: '5'},
+    { name: 'heptagono', source: require('./src/card/images/heptagono.png'), id: '6'},
+    { name: 'octagono',  source: require('./src/card/images/octagono.png'),  id: '7'},
+    { name: 'eneagono',  source: require('./src/card/images/eneagono.png'),  id: '8'},
+    { name: 'circulo',   source: require('./src/card/images/circulo.png'),   id: '9'},
+    { name: 'triangulo', source: require('./src/card/images/triangulo.png'), id: '10'},
+    { name: 'quadrado',  source: require('./src/card/images/quadrado.png'),  id: '11'},
+    { name: 'poligono',  source: require('./src/card/images/poligono.png'),  id: '12'},
+    { name: 'hexagono',  source: require('./src/card/images/hexagono.png'),  id: '13'},
+    { name: 'heptagono', source: require('./src/card/images/heptagono.png'), id: '14'},
+    { name: 'octagono',  source: require('./src/card/images/octagono.png'),  id: '15'},
+    { name: 'eneagono',  source: require('./src/card/images/eneagono.png'),  id: '16'},
+    
+  ])
 
   const toggleRuning = () => {  
   }
 
-  // const randomCard = () => {
+  const data = () => {
+    if (buttonClicked === false) {
+      return people2
+    } 
+    else {
+      return people
+    }
+  }
 
-  //   const ArraysImg = [
-  //     './images/traseira.png',
-  //     './images/circulo.png',
-  //     './images/triangulo.png',
-  //     './images/quadrado.png',
-  //     './images/poligono.png',
-  //     './images/hexagono.png',
-  //     './images/heptagono.png',
-  //     './images/octagono.png',
-  //     './images/eneagono.png'
-  //   ]
+  const randomCard = (item) => {  
+    return item.source
+  }
 
-  //   const random = Math.random() * (7 - 0) + 0
-  //   card(random)
-  //   return require(ArraysImg[0]) 
-  //   //tentando retornar imagem
-  // }
+  const button = () => {
+    
+  }
 
-
-  // const card = (x: number) => {
-  //   const cardX ={
-  //     id: x,
-  //     img: ArraysImg[x]
-  //   } 
-  //   const cardSorted = []
-  //   return cardX.img
-  // }
+  const image = { uri: './src/card/images/triangulo.png' }
 
   return(
     <View>
@@ -43,30 +106,17 @@ const App = () => {
       <Text style={Styles.time}>00:00</Text>
       <View style={Styles.backcard}>
         <View>
-          <ImageBackground source={require('./src/card/images/traseira.png')} style={Styles.card} ></ImageBackground>
-          <ImageBackground source={require('./src/card/images/traseira.png')} style={Styles.card} ></ImageBackground>
-          <ImageBackground source={require('./src/card/images/traseira.png')} style={Styles.card} ></ImageBackground>
-          <ImageBackground source={require('./src/card/images/traseira.png')} style={Styles.card} ></ImageBackground>
-        </View>
-        <View>
-          <ImageBackground source={require('./src/card/images/traseira.png')} style={Styles.card} ></ImageBackground>
-          <ImageBackground source={require('./src/card/images/traseira.png')} style={Styles.card} ></ImageBackground>
-          <ImageBackground source={require('./src/card/images/traseira.png')} style={Styles.card} ></ImageBackground>
-          <ImageBackground source={require('./src/card/images/traseira.png')} style={Styles.card} ></ImageBackground>
-        </View>
-        <View>
-          <ImageBackground source={require('./src/card/images/traseira.png')} style={Styles.card} ></ImageBackground>
-          <ImageBackground source={require('./src/card/images/traseira.png')} style={Styles.card} ></ImageBackground>
-          <ImageBackground source={require('./src/card/images/traseira.png')} style={Styles.card} ></ImageBackground>
-          <ImageBackground source={require('./src/card/images/traseira.png')} style={Styles.card} ></ImageBackground>
-        </View>
-        <View>
-          <ImageBackground source={require('./src/card/images/traseira.png')} style={Styles.card} ></ImageBackground>
-          <ImageBackground source={require('./src/card/images/traseira.png')} style={Styles.card} ></ImageBackground>
-          <ImageBackground source={require('./src/card/images/traseira.png')} style={Styles.card} ></ImageBackground>
-          <ImageBackground source={require('./src/card/images/traseira.png')} style={Styles.card} ></ImageBackground>
-        </View>
-        
+          <FlatList
+            numColumns={4}
+            keyExtractor={( item ) => item.id}
+            data={data()}
+            renderItem={({ item }) => (
+                <Image style={Styles.people}  source={randomCard(item)} />
+              )
+            }
+          />
+
+        </View>        
       </View>
       <Text style={Styles.pair}>Faltam 99 pares.</Text>
       <View style={Styles.button}>

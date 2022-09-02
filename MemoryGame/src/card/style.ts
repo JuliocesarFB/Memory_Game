@@ -2,9 +2,11 @@ import { Image, StyleSheet } from "react-native";
 
 const Styles = StyleSheet.create({
     hiddenCard: {
-        borderColor: '#000000',
-        borderRadius: 25,
-        borderWidth: 2
+      width: 80,
+      height: 80,
+      margin: 10,
+      borderColor: '#000000',
+      flex: 1,
     },
     title: {
         color: 'black' ,
@@ -19,9 +21,9 @@ const Styles = StyleSheet.create({
       marginTop: 20
     },    
     card: {
+      position: 'absolute',
       width: 80,
       height: 80,
-      margin: 10,
       borderColor: '#000000'
     },    
     backcard: {
@@ -40,8 +42,13 @@ const Styles = StyleSheet.create({
     },    
     button: {    
       padding: 10
+    },
+    people: {
+      width: 80,
+      height: 80,
+      margin: 6,
+      
     }
-    
 })
 
 export default Styles
