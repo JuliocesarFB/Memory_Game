@@ -40,7 +40,7 @@ const App = () => {
   const [buttonClicked, setButtonClicked] = useState(false)
   const [count, setCount] = useState(false)
   const [listCard3, setNewListCard3] = useState(listCard2)
-  const [people2, setPeople2] = useState([
+  const [listBack, setListBack] = useState([
     { name: 'traseira',   source: require('./src/card/images/traseira.png'),   id: '1'},
     { name: 'traseira',   source: require('./src/card/images/traseira.png'),   id: '2'},
     { name: 'traseira',   source: require('./src/card/images/traseira.png'),   id: '3'},
@@ -58,7 +58,7 @@ const App = () => {
     { name: 'traseira',   source: require('./src/card/images/traseira.png'),   id: '15'},
     { name: 'traseira',   source: require('./src/card/images/traseira.png'),   id: '16'},
   ])
-  const [people, setPeople] = useState([
+  const [ListFront, setListFront] = useState([
     { name: 'circulo',   source: require('./src/card/images/circulo.png'),   id: '1'},
     { name: 'triangulo', source: require('./src/card/images/triangulo.png'), id: '2'},
     { name: 'quadrado',  source: require('./src/card/images/quadrado.png'),  id: '3'},
@@ -82,11 +82,11 @@ const App = () => {
   }
 
   const data = () => {
-    if (buttonClicked === false) {
-      return people2
+    if (buttonClicked === true) {
+      return listBack
     } 
     else {
-      return people
+      return ListFront
     }
   }
 
@@ -95,7 +95,15 @@ const App = () => {
   }
 
   const button = () => {
+    if (buttonClicked == true) {
+      setButtonClicked(false)
+    }
+    else {
+      setButtonClicked(true)
+    }
     
+    console.log('teste')
+    return null
   }
 
   const image = { uri: './src/card/images/triangulo.png' }
@@ -111,12 +119,32 @@ const App = () => {
             keyExtractor={( item ) => item.id}
             data={data()}
             renderItem={({ item }) => (
-                <Image style={Styles.people}  source={randomCard(item)} />
+                <Image style={Styles.card}  source={randomCard(item)} /> 
               )
             }
           />
+          <TouchableOpacity style={Styles.people} onPress={button}/>
+          <TouchableOpacity style={Styles.people2} onPress={button}/>
+          <TouchableOpacity style={Styles.people3} onPress={button}/>
+          <TouchableOpacity style={Styles.people4} onPress={button}/>
+          <TouchableOpacity style={Styles.people5} onPress={button}/>
+          <TouchableOpacity style={Styles.people6} onPress={button}/>
+          <TouchableOpacity style={Styles.people7} onPress={button}/>
+          <TouchableOpacity style={Styles.people8} onPress={button}/>
+          <TouchableOpacity style={Styles.people9} onPress={button}/>
+          <TouchableOpacity style={Styles.people10} onPress={button}/>
+          <TouchableOpacity style={Styles.people11} onPress={button}/>
+          <TouchableOpacity style={Styles.people12} onPress={button}/>
+          <TouchableOpacity style={Styles.people13} onPress={button}/>
+          <TouchableOpacity style={Styles.people14} onPress={button}/>
+          <TouchableOpacity style={Styles.people15} onPress={button}/>
+          <TouchableOpacity style={Styles.people16} onPress={button}/>
+          
+          
 
-        </View>        
+
+        </View> 
+              
       </View>
       <Text style={Styles.pair}>Faltam 99 pares.</Text>
       <View style={Styles.button}>

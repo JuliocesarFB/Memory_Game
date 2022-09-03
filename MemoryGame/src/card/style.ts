@@ -21,10 +21,10 @@ const Styles = StyleSheet.create({
       marginTop: 20
     },    
     card: {
-      position: 'absolute',
       width: 80,
       height: 80,
-      borderColor: '#000000'
+      borderColor: '#000000',
+      margin: 5
     },    
     backcard: {
       display: 'flex',
@@ -44,11 +44,130 @@ const Styles = StyleSheet.create({
       padding: 10
     },
     people: {
+      left: 0,      
+      position: 'absolute',
       width: 80,
       height: 80,
-      margin: 6,
-      
-    }
+      margin: 5,
+    },
+    people2: {  
+      left: 90,   
+      position: 'absolute',
+      width: 80,
+      height: 80,
+      margin: 5,
+    },
+    people3: {  
+      left: 180,   
+      position: 'absolute',
+      width: 80,
+      height: 80,
+      margin: 5,
+    },
+    people4: {  
+      left: 270,   
+      position: 'absolute',
+      width: 80,
+      height: 80,
+      margin: 5,
+    },
+    people5: {  
+      top: 90,
+      left: 0,   
+      position: 'absolute',
+      width: 80,
+      height: 80,
+      margin: 5,
+    },
+    people6: {  
+      top: 90,
+      left: 90,   
+      position: 'absolute',
+      width: 80,
+      height: 80,
+      margin: 5,
+    },
+    people7: {  
+      top: 90,
+      left: 180,   
+      position: 'absolute',
+      width: 80,
+      height: 80,
+      margin: 5,
+    },
+    people8: {  
+      top: 90,
+      left: 270,   
+      position: 'absolute',
+      width: 80,
+      height: 80,
+      margin: 5,
+    },
+    people9: {  
+      top: 180,
+      left: 0,   
+      position: 'absolute',
+      width: 80,
+      height: 80,
+      margin: 5,
+    },
+    people10: {  
+      top: 180,
+      left: 90,   
+      position: 'absolute',
+      width: 80,
+      height: 80,
+      margin: 5,
+    },
+    people11: {  
+      top: 180,
+      left: 180,   
+      position: 'absolute',
+      width: 80,
+      height: 80,
+      margin: 5,
+    },
+    people12: {  
+      top: 180,
+      left: 270,   
+      position: 'absolute',
+      width: 80,
+      height: 80,
+      margin: 5,
+    },
+    people13: {  
+      top: 270,
+      left: 0,   
+      position: 'absolute',
+      width: 80,
+      height: 80,
+      margin: 5,
+    },
+    people14: {  
+      top: 270,
+      left: 90,   
+      position: 'absolute',
+      width: 80,
+      height: 80,
+      margin: 5,
+    },
+    people15: {  
+      top: 270,
+      left: 180,   
+      position: 'absolute',
+      width: 80,
+      height: 80,
+      margin: 5,
+    },
+    people16: {  
+      top: 270,
+      left: 270,   
+      position: 'absolute',
+      width: 80,
+      height: 80,
+      margin: 5,
+    },
+   
 })
 
 export default Styles
